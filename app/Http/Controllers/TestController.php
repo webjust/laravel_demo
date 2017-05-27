@@ -21,7 +21,23 @@ class TestController extends Controller
 
     public function about()
     {
-        return view('test.about')->with('name', 'webjust');
+        // return view('test.about')->with('name', "<span style='color:red'>webjust</span>");
+        $data = [];
+        $data['name'] = 'webjust rename';
+        $data['age'] = 20;
+
+        $name = 'webjust copy';
+        $age = 22;
+
+/*        return view('test.about')->with([
+            'name'=>'webjust',
+            'age'=>18
+        ]);
+*/    
+
+
+        // return view('test.about', $data);
+        return view('test.about', compact('name', 'age'));
     }
 
     /**
