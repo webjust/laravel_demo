@@ -12,6 +12,11 @@
 */
 
 Route::get('/', function () {
-    return 'about me';
-    // return view('welcome');
+    // return 'about me';
+    // return view('index');
+    return view('welcome');
+});
+
+Route::get('/about', function () {
+	return view('site.about');
 });
